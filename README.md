@@ -28,6 +28,12 @@ To solve the above problems, we leverage Knowledge Distillation. This is a techn
 
 ![image](https://github.com/ShawnSon-hub/Knowledge-Distillation-for-cost-effective-fault-Prediction-in-manufacturing-process/assets/124177883/46818e9f-d5bf-4f6f-9c9e-51091dd778ea)
 
+- Distilled Basic model - Neural network
+![image](https://github.com/ShawnSon-hub/Knowledge-Distillation-for-cost-effective-fault-Prediction-in-manufacturing-process/assets/124177883/1d149d99-8b0d-407d-8cb3-f4c0f576f3bc)
+
+- Distilled Basic model - Non Neural network
+![image](https://github.com/ShawnSon-hub/Knowledge-Distillation-for-cost-effective-fault-Prediction-in-manufacturing-process/assets/124177883/1143bd10-5102-4585-b975-3136e51bcd41)
+
 
 ## Goals
 - Developing a better-performing base model: Leveraging Knowledge Distillation to transfer knowledge from advanced models to the base model, thereby improving the performance of the base model. The main goal is to increase the prediction accuracy for products with only basic inspections.
@@ -35,13 +41,30 @@ To solve the above problems, we leverage Knowledge Distillation. This is a techn
 - Optimize advanced inspection sampling: Instead of performing advanced inspections on all products, find ways to perform advanced inspections on only some products using efficient sampling methods and use this data to improve defect prediction for all products.
 
 ## Data description
-1. Data description
-   - In the semiconductor manufacturing process, each chip on a wafer is inspected as the wafer goes through the manufacturing process. As the wafer goes through the manufacturing process.
-   - This data can be used to predict in advance whether a wafer will be defective.
-     ![image](https://github.com/ShawnSon-hub/Knowledge-Distillation-for-cost-effective-fault-Prediction-in-manufacturing-process/assets/124177883/78f9db95-a31f-46fe-a0bb-6c7bff16b1af)
+- In the semiconductor manufacturing process, each chip on a wafer is inspected as the wafer goes through the manufacturing process. As the wafer goes through the manufacturing process.
+- This data can be used to predict in advance whether a wafer will be defective.
+  ![image](https://github.com/ShawnSon-hub/Knowledge-Distillation-for-cost-effective-fault-Prediction-in-manufacturing-process/assets/124177883/78f9db95-a31f-46fe-a0bb-6c7bff16b1af)
 
-3. Data Preprocessing
+## Experiment
+- Train data and test data split 5:5
+- Models: ANN, RandomForest
+- Sampling
+  RandomSampling
+  Uncertainty Sampling
+  - Margin: The difference between the probability of a bad result and the probability of a good result
+  - Biased Margin: The closeness of the defect rate in the training dataset.
+- Metric: AUROC
+- Performed 30 iterations of the experiment
+- Basic performance comparison between Basic model and Basic model transferred from Advanced model
+- Change in percentage of advanced inspections allowed to match cost Average AUROC results over 30 iterations.
+  - 0(Basic model), 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1(Advanced model)
+ 
+## Results
+- Use knowledge distillation to increase the basic performance of the basic model.
+- A good mix of basic and advanced inspection rates can perform better and save money than performing advanced inspection on every product.
+- Use Uncertainty sampling instead of Randomsampling to further maximize performance.
 
-## 
+![image](https://github.com/ShawnSon-hub/Knowledge-Distillation-for-cost-effective-fault-Prediction-in-manufacturing-process/assets/124177883/777d26fb-97c5-4629-9f55-f142a07ec89f)
+
 
 
