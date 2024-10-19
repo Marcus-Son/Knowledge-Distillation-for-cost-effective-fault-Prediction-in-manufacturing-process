@@ -1,70 +1,61 @@
-# Knowledge-Distillation-for-cost-effective-fault-Prediction-in-manufacturing-process 
+# Knowledge Distillation for Cost-Effective Fault Prediction in Manufacturing Process
+
+## Table of Contents
+1. [Background](#background)
+2. [Problems](#problems)
+3. [Proposed Method](#proposed-method)
+4. [Goals](#goals)
+5. [Data Description](#data-description)
+6. [Experiment](#experiment)
+7. [Results](#results)
 
 ## Background
-In manufacturing, it is important to predict the condition of a product in advance to reduce repair and replacement costs. To do this, basic and advanced inspections are typically performed on products. Basic inspections are common for all products, while advanced inspections are performed for some products at an additional cost.
-- Basic Inspection
-  Purpose: To verify the general quality and performance of the product.
-  Scope: Performed on all products. It is considered a standard part of the manufacturing process.
-  Features: Includes basic quality inspection items and verifies the basic safety and functionality of the product. For example, it might include visual inspections, basic functional tests, and simple physical tests.
-  Cost: Relatively inexpensive. In most manufacturing processes, basic inspections are considered standard procedure and are performed at no additional cost.
-- Advanced Inspection
-  Purpose: To verify the detailed quality and performance of a product in greater depth.
-  Scope: Performed selectively, advanced inspections typically entail additional costs.
-  Features: Includes more sophisticated and systematic testing. For example, advanced materials testing, detailed performance evaluations, and complex safety testing. These inspections are designed to uncover deeper flaws in a particular product.
-  Cost: They are more expensive than basic inspections and sometimes require specialized equipment or specialized expertise, which can make it cost ineffective to perform advanced inspections on every product.
+In manufacturing, predicting product conditions early is essential to reduce repair and replacement costs. This process involves:
+- **Basic Inspections**: Performed on all products to check general quality and functionality.
+- **Advanced Inspections**: Performed selectively for in-depth quality verification but incurs higher costs.
 
-![image](https://github.com/ShawnSon-hub/Knowledge-Distillation-for-cost-effective-fault-Prediction-in-manufacturing-process/assets/124177883/8ec0f1ee-8902-45b8-8e3e-dbf302bc5b60)
+Balancing these two inspection methods is crucial, as basic inspections are cost-effective but may miss some defects, while advanced inspections, though more accurate, are costlier.
 
-While these inspections are important for ensuring product quality and identifying defects in advance, they also present a challenge to manage costs and time efficiently. Basic inspections are essential for all products, but due to their limited scope, they may not detect some defects. Advanced inspections, on the other hand, provide more accurate and detailed information, but can be costly to apply to all products. Balancing these two inspection methods therefore becomes a major challenge in manufacturing.
+![Basic vs Advanced Inspection](https://github.com/ShawnSon-hub/Knowledge-Distillation-for-cost-effective-fault-Prediction-in-manufacturing-process/assets/124177883/8ec0f1ee-8902-45b8-8e3e-dbf302bc5b60)
 
 ## Problems
-- Inspection cost and time: Performing extensive quality inspections on every product is inefficient in terms of cost and time. Advanced inspections, in particular, require additional costs and resources, which increase overall manufacturing costs.
-- Accuracy of defect prediction: Due to limited data and inspection items, defect prediction can be inaccurate. This impacts product quality control and increases the risk of defective products reaching the market.
-- Limitations of advanced inspections: Performing advanced inspections on every product is cost impractical. However, some defects may not be detected by basic inspections alone.
-- Difficulty in making cost-effective decisions: Deciding which products should be subjected to advanced inspection is a complex task, made more difficult without proper data analysis and predictive models.
+- **Cost and time inefficiencies**: Performing advanced inspections on every product is costly and time-consuming.
+- **Defect prediction accuracy**: Basic inspections may not capture all defects.
+- **Balancing inspection types**: Determining which products require advanced inspection is challenging without predictive data.
 
 ## Proposed Method
-To solve the above problems, we leverage Knowledge Distillation. This is a technique that improves the performance of the base model by transferring knowledge from the advanced model to the base model. In the training phase of the prediction model, it assumes that all features are available, and predicts the status of the product with the basic model for products where only basic inspection has been performed, and with the advanced model for products where both basic and advanced inspection have been performed. In this study, we assume that the advanced model has better prediction performance than the basic model.
+We propose using **Knowledge Distillation**, where a more advanced model transfers knowledge to a basic model. The base model is trained to predict faults using both basic and advanced inspection data, improving defect prediction accuracy with lower inspection costs.
 
-![image](https://github.com/ShawnSon-hub/Knowledge-Distillation-for-cost-effective-fault-Prediction-in-manufacturing-process/assets/124177883/46818e9f-d5bf-4f6f-9c9e-51091dd778ea)
+![Knowledge Distillation](https://github.com/ShawnSon-hub/Knowledge-Distillation-for-cost-effective-fault-Prediction-in-manufacturing-process/assets/124177883/46818e9f-d5bf-4f6f-9c9e-51091dd778ea)
 
-- Distilled Basic model - Neural network
-![image](https://github.com/ShawnSon-hub/Knowledge-Distillation-for-cost-effective-fault-Prediction-in-manufacturing-process/assets/124177883/1d149d99-8b0d-407d-8cb3-f4c0f576f3bc)
+- **Distilled Basic Model (Neural Network)**: Shows how the basic model learns from the advanced model.
+  ![Neural Network](https://github.com/ShawnSon-hub/Knowledge-Distillation-for-cost-effective-fault-Prediction-in-manufacturing-process/assets/124177883/1d149d99-8b0d-407d-8cb3-f4c0f576f3bc)
 
-- Distilled Basic model - Non Neural network
-![image](https://github.com/ShawnSon-hub/Knowledge-Distillation-for-cost-effective-fault-Prediction-in-manufacturing-process/assets/124177883/1143bd10-5102-4585-b975-3136e51bcd41)
-
+- **Distilled Basic Model (Non-Neural Network)**: Illustrates non-neural network approach.
+  ![Non-Neural Network](https://github.com/ShawnSon-hub/Knowledge-Distillation-for-cost-effective-fault-Prediction-in-manufacturing-process/assets/124177883/1143bd10-5102-4585-b975-3136e51bcd41)
 
 ## Goals
-- Developing a better-performing base model: Leveraging Knowledge Distillation to transfer knowledge from advanced models to the base model, thereby improving the performance of the base model. The main goal is to increase the prediction accuracy for products with only basic inspections.
-- Cost-Effective Defect Prediction: For defect prediction in the manufacturing process, the goal is to develop cost-effective models that minimize costly advanced inspections while maintaining high prediction accuracy.
-- Optimize advanced inspection sampling: Instead of performing advanced inspections on all products, find ways to perform advanced inspections on only some products using efficient sampling methods and use this data to improve defect prediction for all products.
+- **Developing a better-performing base model**: Leverage knowledge distillation to transfer knowledge from advanced models to the base model, thereby improving the performance of the base model.
+- **Cost-Effective Defect Prediction**: Minimize costly advanced inspections while maintaining high prediction accuracy.
+- **Optimize Advanced Inspection Sampling**: Perform advanced inspections only on selected products using efficient sampling methods.
 
-## Data description
-- In the semiconductor manufacturing process, each chip on a wafer is inspected as the wafer goes through the manufacturing process. As the wafer goes through the manufacturing process.
-- This data can be used to predict in advance whether a wafer will be defective.
-  ![image](https://github.com/ShawnSon-hub/Knowledge-Distillation-for-cost-effective-fault-Prediction-in-manufacturing-process/assets/124177883/78f9db95-a31f-46fe-a0bb-6c7bff16b1af)
+## Data Description
+- In semiconductor manufacturing, wafers are inspected throughout the process. The dataset can predict whether a wafer will be defective before the end of production.
+  
+  ![Wafer Inspection](https://github.com/ShawnSon-hub/Knowledge-Distillation-for-cost-effective-fault-Prediction-in-manufacturing-process/assets/124177883/78f9db95-a31f-46fe-a0bb-6c7bff16b1af)
 
 ## Experiment
-- Train data and test data split 5:5
-- Models: ANN, RandomForest
-- Sampling
-  RandomSampling
-  Uncertainty Sampling
-  - Margin: The difference between the probability of a bad result and the probability of a good result
-  - Biased Margin: The closeness of the defect rate in the training dataset.
-- Metric: AUROC
-- Performed 30 iterations of the experiment
-- Basic performance comparison between Basic model and Basic model transferred from Advanced model
-- Change in percentage of advanced inspections allowed to match cost Average AUROC results over 30 iterations.
-  - 0(Basic model), 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1(Advanced model)
- 
+- **Data Split**: Train/test data split 50:50.
+- **Models**: Artificial Neural Networks (ANN) and Random Forest.
+- **Sampling**:
+  - **Random Sampling**: Selecting products randomly for advanced inspection.
+  - **Uncertainty Sampling**: Prioritizing products with uncertain defect predictions.
+- **Metrics**: AUROC was used to evaluate model performance.
+- **Iterations**: 30 iterations per experiment.
+
 ## Results
-- Use knowledge distillation to increase the basic performance of the basic model.
-- A good mix of basic and advanced inspection rates can perform better and save money than performing advanced inspection on every product.
-- Use Uncertainty sampling instead of Randomsampling to further maximize performance.
+- **Improved Basic Model Performance**: Knowledge distillation significantly enhanced the basic model's prediction accuracy.
+- **Cost-Effective Inspection**: A combination of basic and advanced inspections outperformed applying advanced inspection to all products.
+- **Sampling Strategies**: Uncertainty sampling showed better results compared to random sampling.
 
-![image](https://github.com/ShawnSon-hub/Knowledge-Distillation-for-cost-effective-fault-Prediction-in-manufacturing-process/assets/124177883/777d26fb-97c5-4629-9f55-f142a07ec89f)
-
-
-
+![Results](https://github.com/ShawnSon-hub/Knowledge-Distillation-for-cost-effective-fault-Prediction-in-manufacturing-process/assets/124177883/777d26fb-97c5-4629-9f55-f142a07ec89f)
