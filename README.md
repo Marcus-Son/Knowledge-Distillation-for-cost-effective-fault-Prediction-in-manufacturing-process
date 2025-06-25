@@ -88,13 +88,19 @@ Our approach is two-fold:
    - As a result, the student model—whether NN or RF—achieves higher accuracy and better fault detection using only cheap, universally-available data, effectively closing the performance gap between basic and advanced inspections.
 
    <p align="center">
-     <img src="https://github.com/ShawnSon-hub/Knowledge-Distillation-for-cost-effective-fault-Prediction-in-manufacturing-process/assets/124177883/46818e9f-d5bf-4f6f-9c9e-51091dd778ea" alt="Knowledge Distillation" width="500"/>
+     <img src="https://github.com/ShawnSon-hub/Knowledge-Distillation-for-cost-effective-fault-Prediction-in-manufacturing-process/assets/124177883/46818e9f-d5bf-4f6f-9c9e-51091dd778ea" width="620"/><br>
+     <b>Figure 1:</b> Application on active inspection framework.
    </p>
 
-   - <img src="https://github.com/ShawnSon-hub/Knowledge-Distillation-for-cost-effective-fault-Prediction-in-manufacturing-process/assets/124177883/1d149d99-8b0d-407d-8cb3-f4c0f576f3bc" width="420">
-     <div align="center" style="font-size:0.92em"><b>Figure:</b> Neural Network-based student model distillation.</div>
-   - <img src="https://github.com/ShawnSon-hub/Knowledge-Distillation-for-cost-effective-fault-Prediction-in-manufacturing-process/assets/124177883/1143bd10-5102-4585-b975-3136e51bcd41" width="420">
-     <div align="center" style="font-size:0.92em"><b>Figure:</b> Random Forest (Non-Neural Network)-based distillation for interpretable settings.</div>
+   <p align="center">
+     <img src="https://github.com/ShawnSon-hub/Knowledge-Distillation-for-cost-effective-fault-Prediction-in-manufacturing-process/assets/124177883/1d149d99-8b0d-407d-8cb3-f4c0f576f3bc" width="500"/><br>
+     <b>Figure 2:</b> Neural Network-based student model distillation.
+   </p>
+
+   <p align="center">
+     <img src="https://github.com/ShawnSon-hub/Knowledge-Distillation-for-cost-effective-fault-Prediction-in-manufacturing-process/assets/124177883/1143bd10-5102-4585-b975-3136e51bcd41" width="500"/><br>
+     <b>Figure 3:</b> Random Forest (Non-Neural Network)-based distillation for interpretable settings.
+   </p>
 
 2. **Optimize Advanced Inspection with Smarter Sampling:**  
    - Instead of random sampling, we experiment with multiple advanced sampling strategies—such as **uncertainty sampling**—to target advanced inspections where the model is least confident.
