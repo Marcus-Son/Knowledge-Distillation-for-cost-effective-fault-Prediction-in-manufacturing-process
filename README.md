@@ -279,7 +279,7 @@ The orange line (KD + uncertainty sampling) consistently achieves higher AUROC w
 #### **Random Forest (Non-Neural Network) Results**
 
 <p align="center">
-  <img src="![alt text](images/image.png)" alt="Random Forest Results: Recipe1" width="700"/>
+  <img width="863" alt="image" src="https://github.com/user-attachments/assets/cd9c1177-8b1a-43da-8ffd-a62e4fee7040" />
 </p>
 <p align="center" style="font-size:0.95em">
 <b>Figure 2 (Random Forest, Recipe1):</b> AUROC across different inspection rates and sampling strategies for the Random Forest-based (non-neural network) model on Recipe1 data.<br>
@@ -287,7 +287,7 @@ KD-student consistently outperforms the standard RF, especially when combined wi
 </p>
 
 <p align="center">
-  <img src="![alt text](images/image-1.png)" alt="Random Forest Results: Recipe2" width="700"/>
+  <img width="863" alt="image" src="https://github.com/user-attachments/assets/a696c887-f359-4d75-9b7f-e65a0490f2e6" />
 </p>
 <p align="center" style="font-size:0.95em">
 <b>Figure 3 (Random Forest, Recipe2):</b> AUROC across different inspection rates and sampling strategies for the Random Forest-based (non-neural network) model on Recipe2 data.<br>
