@@ -6,8 +6,8 @@ A real-world machine learning project applying knowledge distillation and active
 
 ## Table of Contents
 
-1. [Project Overview](#project-overview)
-2. [Background & Motivation](#background--motivation)
+1. [Project Overview](#1-project-overview)
+2. [Background & Motivation](#2-background--motivation)
 3. [Problem Statement](#problem-statement)
 4. [Proposed Method](#proposed-method)
 5. [Data Description](#data-description)
