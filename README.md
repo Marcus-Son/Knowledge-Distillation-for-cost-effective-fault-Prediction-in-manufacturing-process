@@ -8,16 +8,16 @@ A real-world machine learning project applying knowledge distillation and active
 
 1. [Project Overview](#1-project-overview)
 2. [Background & Motivation](#2-background--motivation)
-3. [Problem Statement](#problem-statement)
-4. [Proposed Method](#proposed-method)
-5. [Data Description](#data-description)
-6. [Project Structure](#project-structure)
-7. [Experimental Design & Methods](#experimental-design--methods)
-8. [Key Results & Insights](#key-results--insights)
-9. [My Contribution](#my-contribution)
-10. [Publications / Presentation History](#publications--presentation-history)
-11. [Notes / Limitations](#notes--limitations)
-12. [Contact](#contact)
+3. [Problem Statement](#3-problem-statement)
+4. [Proposed Method](#4-proposed-method)
+5. [Data Description](#5-data-description)
+6. [Project Structure](#6-project-structure)
+7. [Experimental Design & Methods](#7-experimental-design--methods)
+8. [Key Results & Insights](#8-key-results--insights)
+9. [My Contribution](#9-my-contribution)
+10. [Publications / Presentation History](#10-publications--presentation-history)
+11. [Notes / Limitations](#11-notes--limitations)
+12. [Contact](#12-contact)
 
 ## 1. Project Overview
 
