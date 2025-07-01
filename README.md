@@ -142,7 +142,7 @@ Build the most cost-effective fault detection system by
 ## 6. Project Structure
 
 This repository is organized as follows:
-'''
+```
 ├── ANN/
 │   ├── modules/                       # Core model and utility scripts (training, prediction, KD logic)
 │   ├── seed_everything.py             # For reproducibility (sets random seeds)
@@ -184,7 +184,7 @@ This repository is organized as follows:
 ├── graph.ipynb                          # Aggregates and visualizes experimental results
 ├── requirements.txt                     # Python dependencies for reproduction
 └── README.md                            # Project summary, usage, and documentation
-'''
+```
 
 **Notes:**
 - Both `ANN/` and `RandomForest/` directories contain full pipelines for neural network and non-neural network (RF) models, including KD and sampling experiments.
